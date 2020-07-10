@@ -1,0 +1,1 @@
+var a; var b; var res; a = true; b= true; res= a && b; console.log ("resuktado dea interseccion b = " +res)
