@@ -1,0 +1,1 @@
+var a = prompt ("ingrese valor 1");var b = prompt ("ingrese valor 2"); var c = prompt ("ingrese valor 3");var d = prompt ( "ingrese valor 4");var e= prompt("ingrese valor 5");var r = ((parseInt(a)+parseInt(b)+parseInt(c)+parseInt(d)+parseInt(e))/5); alert ("el promedio es ="+r)
