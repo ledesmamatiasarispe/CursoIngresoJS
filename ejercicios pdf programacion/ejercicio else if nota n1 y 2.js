@@ -1,0 +1,1 @@
+var n_1 = prompt("ingrese nota 1 = " , 0 ); var n_2 = prompt("ingrese nota 2 = ", 0);           var comparacion = (n_1 > n_2); if(comparacion == true ){alert( "la nota 1 es mayor")}else{alert("la nota 2 es menor")}

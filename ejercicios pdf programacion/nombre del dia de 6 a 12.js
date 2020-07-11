@@ -1,0 +1,1 @@
+var dia; dia = prompt ("que nombre tiene el dia numero =");                              switch(dia = parseInt(dia)) {case 6 :{alert("lunes");break;}case 7 :{alert("martes");break;}case 8 :{alert("miercoles");break;}case 9 :{alert("jueves");break;}case 10:{(alert("viernes"));break;}case 11:{alert("sabadou");break;}case 12: {alert("domingo");break;}};
