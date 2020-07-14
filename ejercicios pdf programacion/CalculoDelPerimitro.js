@@ -1,0 +1,1 @@
+function PerimetroDeCirculo (r){var calculo; calculo = 3.14*2*r;return calculo;};var contador; var c; for(contador=0;contador<10;contador++){calculo=PerimetroDeCirculo(contador);console.log("calculo" +calculo);}
