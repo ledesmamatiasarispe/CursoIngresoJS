@@ -8,6 +8,6 @@ function mostrar()
 		{txtIdEdad.value = "Mayor de edad"}	
 	else
 		{txtIdEdad.value = "Menor de edad"}					
-
+    
 	
 }//FIN DE LA FUNCIÓN
