@@ -6,13 +6,56 @@ C.	Para hacer un contrapiso de 1m x 1m se necesitan 2 bolsas de cemento y 3 de c
 
 function Rectangulo () 
 {
+     var ancho;
+     var largo;
+     var Perimetro;
+     var cantidadDeHilosDeAlambre = 3;
 
-}
+     ancho = txtIdAncho.value;
+     largo = txtIdLargo.value;
+
+     ancho =parseFloat(ancho);
+     largo =parseFloat(largo);
+
+     Perimetro = (ancho + largo) *2;
+
+     alert("el perimetro es = "+Perimetro.toFixed(2)+"m, Se necesitan = " + (Perimetro*cantidadDeHilosDeAlambre).toFixed(2)+"m de alambre" );
+} 
 function Circulo () 
 {
+     var Perimetro;
+     var cantidadDeHilosDeAlambre = 3;
+     var radio;
+    
+     radio = txtIdRadio.value;
+
+     radio=parseFloat(radio);
+    
+     Perimetro= radio*2* Math.PI;
+
+     alert("el perimetro es = "+Perimetro.toFixed(2)+"m, Se necesitan = " + (Perimetro*cantidadDeHilosDeAlambre).toFixed(2)+"m de alambre" );
 	
 }
 function Materiales () 
 {
-	
-}
+    var ancho;
+    var largo;
+    var superficie;
+    var BolsasDeCementoPorMetroCuadrado =2;
+    var BolsasDeCalPorMetroCuadrado = 3;
+    ancho = txtIdAncho.value;
+    largo = txtIdLargo.value;
+
+    ancho =parseFloat(ancho);
+    largo =parseFloat(largo);
+
+    superficie= ancho*largo;
+
+    BolsasDeCalPorMetroCuadrado= superficie*BolsasDeCalPorMetroCuadrado;
+    BolsasDeCementoPorMetroCuadrado = superficie*BolsasDeCementoPorMetroCuadrado;
+
+    alert("para"+superficie.toFixed(2)+"m^2 de contrapiso se necesitan = "+BolsasDeCalPorMetroCuadrado.toFixed(2)+" bolsas de cal y "+ BolsasDeCementoPorMetroCuadrado.toFixed(2)+" bolsas de cemento "  )
+} 
+
+
+
