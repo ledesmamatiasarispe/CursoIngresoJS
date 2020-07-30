@@ -1,29 +1,42 @@
 /*
-Al presionar el botón pedir  números  
-hasta que el usuario quiera, mostrar:
-1-Suma de los negativos.
-2-Suma de los positivos.
-3-Cantidad de positivos.
-4-Cantidad de negativos.
+Al presionar el botón pedir  números hasta que el usuario quiera, mostrar:
+1-Suma de los negativos.4-Cantidad de negativos.8-Promedios de negativos
+2-Suma de los positivos.3-Cantidad de positivos.7-Promedio de positivos.
+
 5-Cantidad de ceros.
 6-Cantidad de números pares.
-7-Promedio de positivos.
-8-Promedios de negativos.
+
+
+.
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	//declarar contadores y variables 
-	var respuesta;
-	var numeroIngresado;
-	var sumaNegativos=0;
+	var numerosIngresados;
+	var condicionWhile = true;
+	var acumuladorDeNegativos;
+	var acumumuladorPositivos;
+	var contadorNegativos;
+	var contadorPositivos;
+	var promedioNegativos;
+	var promedioPositivos;
+	var contadorCeros;
+	var contadorPares;
+	var diferenciasPositivosNegativos
 
-	respuesta="si";
+	while(condicionWhile){
+		numerosIngresados  =	prompt("ingrese numeros");
+		numerosIngresados  =	parseInt(numerosIngresados);
 
-	while(respuesta=="si")
-	{
-		
-		respuesta=prompt("desea continuar?");
-	}//fin del while
+		if (isNaN(numerosIngresados)){
+			
+			condicionWhile = confirm("Error!.¿Quiere usted seguir ingresando numeros?");
+			continue;
+		}
 
-	document.write("la suma de negativos es :"+sumaNegativos);
+
+
+
+
+	}
+
 }//FIN DE LA FUNCIÓN
