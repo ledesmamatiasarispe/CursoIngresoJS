@@ -11,32 +11,59 @@ Al presionar el botón pedir  números hasta que el usuario quiera, mostrar:
 9-Diferencia entre positivos y negativos, (positvos-negativos). */
 function mostrar()
 {
-	var numerosIngresados;
+	var numeroIngresado;
 	var condicionWhile = true;
-	var acumuladorDeNegativos;
-	var acumumuladorPositivos;
-	var contadorNegativos;
-	var contadorPositivos;
-	var promedioNegativos;
-	var promedioPositivos;
-	var contadorCeros;
-	var contadorPares;
-	var diferenciasPositivosNegativos
+	var acumuladorDeNegativos = 0 ;
+	var acumumuladorPositivos = 0 ;
+	var contadorNegativos = 0 ;
+	var contadorPositivos = 0 ;
+	var promedioNegativos = 0 ;
+	var promedioPositivos = 0 ;
+	var contadorCeros = 0 ;
+	var contadorPares = 0 ;
+	var diferenciaEntrePositivosNegativos = 0 ;
 
 	while(condicionWhile){
-		numerosIngresados  =	prompt("ingrese numeros");
-		numerosIngresados  =	parseInt(numerosIngresados);
+		numeroIngresado  =	prompt("ingrese numeros");
+		numeroIngresado  =	parseInt(numeroIngresado);
 
-		if (isNaN(numerosIngresados)){
+		if (isNaN(numeroIngresado)){
 			
 			condicionWhile = confirm("Error!.¿Quiere usted seguir ingresando numeros?");
 			continue;
 		}
+		if(numeroIngresado > 0){
+			acumumuladorPositivos +=numeroIngresado ;
+			contadorPositivos++;
 
-
-
-
-
+		}else if(numeroIngresado < 0 ){
+			acumuladorDeNegativos += numeroIngresado;
+			contadorNegativos++;
+		}else{
+			contadorCeros++;
+		}
+		if(numeroIngresado % 2 == 0){
+			contadorPares++;
+		}
+	console.log("acumuladorDeNegativos   "+ acumuladorDeNegativos);
+	console.log("acumumuladorPositivos   "+ acumumuladorPositivos);
+	console.log("contadorNegativos  "+ contadorNegativos);
+	console.log("contadorPositivos   "+ contadorPositivos);
+	console.log("contadorCeros  "+ contadorCeros);
+	console.log("contadorPares  "+ contadorPares);
 	}
+	promedioNegativos= acumuladorDeNegativos / contadorNegativos;
+	promedioPositivos= acumumuladorPositivos / contadorPositivos;
+	diferenciaEntrePositivosNegativos= acumumuladorPositivos + acumuladorDeNegativos;
+
+	document.write("suma de los negativos = "+acumuladorDeNegativos+
+	" suma de los positivos= "+acumumuladorPositivos+
+	" cantidad de los negativos = "+ contadorNegativos+ 
+	" cantidad de positivos = "+ contadorPositivos +
+	" cantidad de ceros = "+ contadorCeros+
+	" cantidad de numeros pares = "+contadorPares+
+	" promedio de negarivos = "+ promedioNegativos+
+	" promedio de positivos = " + promedioPositivos+ 
+	" diferencia entre positivos y negativos = "+ diferenciaEntrePositivosNegativos);
 
 }//FIN DE LA FUNCIÓN

@@ -11,18 +11,29 @@ Más de 10 intentos: “afortunado en el amor!!”.*/
 
 var numeroSecreto; 
 var contadorIntentos;
+var numeroIngresado;
 
+contadorIntentos = 0;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
-	
+	 numeroSecreto = Math.floor(Math.random() * (100 - 1) + 1);
+	console.log(numeroSecreto);
 
 }
 
 function verificar()
-{
-	
-	
+{	
+	numeroIngresado = txtIdNumero.value;
+	numeroIngresado = parseInt(numeroIngresado);
+	contadorIntentos++ ;
+	txtIdIntentos.value = contadorIntentos;
+	if(numeroIngresado > numeroSecreto){
+		confirm("el numero secreto es mas pequeño");
+	}else if(numeroIngresado < numeroSecreto){
+		confirm("el numero secreto es mas grande");
+	}else if(numeroIngresado == numeroSecreto) {
+		alert("usted ha ganado y solo en "+contadorIntentos+"intentos");
+	}
 
 }
